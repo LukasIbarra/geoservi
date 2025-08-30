@@ -20,25 +20,25 @@
             @php
                 $servicios = [
                     [
-                        'img' => '/img/servicios/maquina.jpg',
+                        'img' => asset('img/servicios/maquina.jpg'),
                         'icon' => 'fa-cogs',
                         'titulo' => 'Equipos Industriales',
                         'desc' => 'Reparación y fabricación de partes y piezas de equipos mineros e industriales con estándares de calidad.',
                     ],
                     [
-                        'img' => '/img/servicios/estructura.jpg',
+                        'img' => asset('img/servicios/estructura1.jpg'),
                         'icon' => 'fa-industry',
                         'titulo' => 'Estructuras Metálicas',
                         'desc' => 'Diseño y fabricación de estructuras metálicas resistentes para la minería y construcción industrial.',
                     ],
                     [
-                        'img' => '/img/servicios/geomembrana.jpg',
+                        'img' => asset('img/servicios/geomembrana.jpg'),
                         'icon' => 'fa-layer-group',
                         'titulo' => 'Geomembranas HDPE',
                         'desc' => 'Instalación profesional de geomembranas y soldadura de tuberías con tecnología de punta.',
                     ],
                     [
-                        'img' => '/img/servicios/cilindro1.jpg',
+                        'img' => asset('img/servicios/cilindro1.jpg'),
                         'icon' => 'fa-tools',
                         'titulo' => 'Cilindros Hidráulicos',
                         'desc' => 'Reparación, mantención y fabricación de cilindros hidráulicos con garantía de calidad.',
