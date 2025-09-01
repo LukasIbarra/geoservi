@@ -24,24 +24,28 @@
                         'icon' => 'fa-cogs',
                         'titulo' => 'Equipos Industriales',
                         'desc' => 'Reparación y fabricación de partes y piezas de equipos mineros e industriales con estándares de calidad.',
+                        'route' => 'equipo',
                     ],
                     [
                         'img' => asset('img/servicios/estructura1.jpg'),
                         'icon' => 'fa-industry',
                         'titulo' => 'Estructuras Metálicas',
                         'desc' => 'Diseño y fabricación de estructuras metálicas resistentes para la minería y construcción industrial.',
+                        'route' => 'estructura',
                     ],
                     [
                         'img' => asset('img/servicios/geomembrana.jpg'),
                         'icon' => 'fa-layer-group',
                         'titulo' => 'Geomembranas HDPE',
                         'desc' => 'Instalación profesional de geomembranas y soldadura de tuberías con tecnología de punta.',
+                        'route' => 'geom',
                     ],
                     [
                         'img' => asset('img/servicios/cilindro1.jpg'),
                         'icon' => 'fa-tools',
                         'titulo' => 'Cilindros Hidráulicos',
                         'desc' => 'Reparación, mantención y fabricación de cilindros hidráulicos con garantía de calidad.',
+                        'route' => 'cilindros',
                     ]
                 ];
             @endphp
@@ -59,7 +63,7 @@
                 <div class="p-6 bg-[#1c1c1c]">
                     <h3 class="text-xl font-bold text-white mb-2">{{ $servicio['titulo'] }}</h3>
                     <p class="text-gray-300 mb-4">{{ $servicio['desc'] }}</p>
-                    <a href="#" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-400 group-hover:underline">
+                    <a href="{{ route($servicio['route']) }}" class="inline-flex items-center text-orange-500 font-medium hover:text-orange-400 group-hover:underline">
                         Ver detalles
                         <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
                     </a>

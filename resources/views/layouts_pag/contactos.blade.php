@@ -44,7 +44,7 @@
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-orange-400">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <input type="email" id="contact-email-section" name="email" required class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300" placeholder="tucorreo@ejemplo.com">
+                                <input type="email" id="contact-email-section" name="email" required class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300" placeholder="ventas@geoservi.cl">
                             </div>
                         </div>
                         
@@ -54,7 +54,7 @@
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-orange-400">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <input type="tel" id="contact-phone-section" name="phone" class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300" placeholder="+56 9 1234 5678">
+                                <input type="tel" id="contact-phone-section" name="phone" class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 transition-all duration-300" placeholder="+56 9 3116 5525">
                             </div>
                         </div>
                         
@@ -138,7 +138,7 @@
                         </div>
                         
                         <!-- Tarjeta de sitio web -->
-                        <div class="p-6 bg-white/5 rounded-xl border border-white/10 hover:border-orange-400/30 transition-all duration-300 group">
+                        <div class="mb-10 p-6 bg-white/5 rounded-xl border border-white/10 hover:border-orange-400/30 transition-all duration-300 group">
                             <h4 class="text-xl font-semibold mb-5 flex items-center text-white">
                                 <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
                                 Sitio Web
@@ -155,12 +155,31 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Tarjeta de ubicación -->
+                        <div class="mb-10 p-6 bg-white/5 rounded-xl border border-white/10 hover:border-orange-400/30 transition-all duration-300 group">
+                            <h4 class="text-xl font-semibold mb-5 flex items-center text-white">
+                                <span class="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
+                                Ubicación
+                            </h4>
+                            <div class="flex items-start group-hover:text-white transition-colors duration-300">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-8 w-8 rounded-full bg-orange-500/20 text-orange-400">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-base font-medium">Araucania edif 1 5427 105 Espacio la florida La serena</p>
+                                    <p class="text-sm text-gray-400 mt-1">Chile</p>
+                                </div>
+                            </div>
+                        </div>
                         
                         <!-- CTA adicional -->
                         <div class="mt-10 p-6 bg-gradient-to-r from-orange-500/10 to-orange-600/10 rounded-xl border border-orange-500/20">
                             <h4 class="text-xl font-semibold mb-3 text-white">¿Necesitas respuesta inmediata?</h4>
                             <p class="text-gray-300 mb-5">Contáctanos directamente por teléfono para consultas urgentes.</p>
-                            <a href="tel:+56212345678" class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-bold transition-colors duration-300">
+                            <a href="tel:+56931165525" class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-bold transition-colors duration-300">
                                 <i class="fas fa-phone-volume mr-2"></i> Llamar ahora
                             </a>
                         </div>

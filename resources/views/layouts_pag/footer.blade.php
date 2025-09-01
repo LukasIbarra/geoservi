@@ -59,7 +59,7 @@
                                 <i class="fas fa-map-marker-alt text-xs"></i>
                             </div>
                         </div>
-                        <span class="ml-3">Av. Industrial 1234, Rancagua, Región de O'Higgins</span>
+                        <span class="ml-3">Araucania edif 1 5427 105 Espacio la florida La serena</span>
                     </li>
                     <li class="flex items-start">
                         <div class="flex-shrink-0 mt-1">
@@ -67,7 +67,7 @@
                                 <i class="fas fa-phone-alt text-xs"></i>
                             </div>
                         </div>
-                        <a href="tel:+56941206045" class="ml-3 hover:text-orange-400 transition-colors duration-300">+56 9 4120 6045</a>
+                        <a href="tel:+56931165525" class="ml-3 hover:text-orange-400 transition-colors duration-300">+56 9 3116 5525</a>
                     </li>
                     <li class="flex items-start">
                         <div class="flex-shrink-0 mt-1">
@@ -75,7 +75,7 @@
                                 <i class="fas fa-envelope text-xs"></i>
                             </div>
                         </div>
-                        <a href="mailto:pruebasgeoservi@gmail.com" class="ml-3 hover:text-orange-400 transition-colors duration-300">pruebasgeoservi@gmail.com</a>
+                        <a href="mailto:ventas@geoservi.cl" class="ml-3 hover:text-orange-400 transition-colors duration-300">ventas@geoservi.cl</a>
                     </li>
                 </ul>
             </div>

@@ -3,6 +3,8 @@
 @section('title', 'Contacto')
 
 @section('content')
+@include('layouts_pag.flotantes')
+
 <!-- Sección Contacto -->
 <section id="contacto" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#141414] to-[#0a0a0a] text-white overflow-hidden">
     <!-- Modal de Contacto -->
@@ -72,7 +74,7 @@
                                 </div>
                                 <div>
                                     <label for="empresa-telefono" class="block text-sm font-medium text-gray-300 mb-1">Teléfono *</label>
-                                    <input type="tel" id="empresa-telefono" name="phone" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 1234 5678" required>
+                                    <input type="tel" id="empresa-telefono" name="phone" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 3116 5525" required>
                                 </div>
                                 <div>
                                     <label for="empresa-servicio" class="block text-sm font-medium text-gray-300 mb-1">Servicio de Interés</label>
@@ -108,24 +110,25 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <span class="ml-4">Av. Industrial 1234, Rancagua, Región de O'Higgins</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500/20 text-orange-400">
-                                            <i class="fas fa-phone-alt"></i>
-                                        </div>
-                                    </div>
-                                    <span class="ml-4">+56 72 2345 678</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 mt-1">
-                                        <div class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500/20 text-orange-400">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                    </div>
-                                    <a href="mailto:contacto@geoservi.cl" class="ml-4 hover:text-orange-400 transition-colors">contacto@geoservi.cl</a>
-                                </li>
+                            <span class="ml-4">Araucania edif 1 5427 105 Espacio la florida La serena</span>
+                            
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500/20 text-orange-400">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <span class="ml-4">+56 9 3116 5525</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500/20 text-orange-400">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <a href="mailto:ventas@geoservi.cl" class="ml-4 hover:text-orange-400 transition-colors">ventas@geoservi.cl</a>
+                        </li>
                                 <li class="flex items-start">
                                     <div class="flex-shrink-0 mt-1">
                                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-orange-500/20 text-orange-400">
@@ -182,7 +185,7 @@
                                     </div>
                                     <div>
                                         <label for="proveedor-telefono" class="block text-sm font-medium text-gray-300 mb-1">Teléfono *</label>
-                                        <input type="tel" id="proveedor-telefono" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 1234 5678" required>
+                                    <input type="tel" id="proveedor-telefono" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 3116 5525" required>
                                     </div>
                                     <div>
                                         <label for="proveedor-rubro" class="block text-sm font-medium text-gray-300 mb-1">Rubro de Proveedor *</label>
@@ -310,7 +313,7 @@
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div>
                                             <label for="trabajo-telefono" class="block text-sm font-medium text-gray-300 mb-1">Teléfono *</label>
-                                            <input type="tel" id="trabajo-telefono" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 1234 5678" required>
+                                            <input type="tel" id="trabajo-telefono" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 3116 5525" required>
                                         </div>
                                         <div>
                                             <label for="trabajo-ciudad" class="block text-sm font-medium text-gray-300 mb-1">Ciudad/Región *</label>
@@ -439,7 +442,8 @@
                         <i class="fas fa-map-marked-alt text-orange-400 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Nuestra Ubicación</h3>
-                    <p class="text-gray-300 mb-4">Av. Industrial 1234, Rancagua, Región de O'Higgins</p>
+                    <p class="text-gray-300 mb-4">Araucania EDIF 1 5427 105 Espacio La Florida | La Serena</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.7444575961204!2d-71.20835279039987!3d-29.929258174877432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691cb0013c311e7%3A0x6ae241b22bc34877!2sCondominio%20Espacio%20La%20Florida!5e0!3m2!1ses-419!2scl!4v1756759003667!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <a href="https://maps.google.com" target="_blank" class="inline-flex items-center text-orange-400 hover:text-white group text-sm font-medium">
                         Ver en Google Maps
                         <i class="fas fa-external-link-alt ml-2 text-xs transition-transform group-hover:translate-x-1"></i>

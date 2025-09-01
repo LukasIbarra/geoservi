@@ -3,7 +3,7 @@
 @section('title', 'Servicios - Geoservi Minería')
 
 @section('content')
-
+@include('layouts_pag.flotantes')
 <!-- Hero Servicios con Video de Fondo -->
 <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
     <!-- Video de fondo -->

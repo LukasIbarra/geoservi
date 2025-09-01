@@ -3,6 +3,7 @@
 @section('title', 'Representaciones')
 
 @section('content')
+@include('layouts_pag.flotantes')
 <!-- Sección Representaciones -->
 <section id="representaciones" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#141414] to-[#0a0a0a] text-white overflow-hidden">
     <!-- Separador superior SVG con efecto -->

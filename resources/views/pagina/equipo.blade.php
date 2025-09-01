@@ -3,7 +3,7 @@
 @section('title', 'Equipos Industriales - Geoservi Minería')
 
 @section('content')
-
+@include('layouts_pag.flotantes')
 <!-- HERO DEL SERVICIO -->
 <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
     <img src="/img/servicios/maquina.jpg" alt="Equipos Industriales"
