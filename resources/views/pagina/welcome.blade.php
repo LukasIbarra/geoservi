@@ -5,6 +5,7 @@
 @section('content')
     @include('layouts_pag.hero')
     @include('layouts_pag.servicios')
+    @include('layouts_pag.software_service')
     @include('layouts_pag.vision')
 
 <section class="py-16 bg-gradient-to-b from-zinc-900 to-zinc-800">

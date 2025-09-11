@@ -27,6 +27,7 @@ Route::get('/estructura', fn() => view('pagina.estructura'))->name('estructura')
 Route::get('/equipo', fn() => view('pagina.equipo'))->name('equipo');
 Route::get('/contacto', fn() => view('pagina.contacto'))->name('contacto');
 Route::get('/cilindros', fn() => view('pagina.cilindros'))->name('cilindros');
+Route::get('/software', fn() => view('pagina.software'))->name('software');
 
 // Ruta para enviar formulario de contacto
 Route::post('/contacto/enviar', [ContactoController::class, 'enviar'])->name('contacto.enviar');

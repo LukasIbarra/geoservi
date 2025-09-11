@@ -228,11 +228,13 @@
     </div>
         <div class="absolute -bottom-[1px] left-0 w-full overflow-hidden leading-[0]">
         <svg class="relative block w-full h-16" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
-            <path d="M321.39,56.44C207.33,35.37,92.27,14.29,0,0V120H1200V0C1078.52,22.51,957.05,45.02,835.57,66.1,714.1,87.17,592.62,106.84,471.15,90.32,399.12,80.27,360.25,65.5,321.39,56.44Z" 
+            <path d="M321.39,56.44C207.33,35.37,92.27,14.29,0,0V120H1200V0C1078.52,22.51,957.05,45.02,835.57,66.1,714.1,87.17,592.62,106.84,471.15,90.32,399.12,80.27,360.25,65.5,321.39,56.44Z"
                   class="fill-white"></path>
         </svg>
     </div>
 </section>
+
+@include('layouts_pag.software_service')
 
 <!-- Proceso de Trabajo -->
 <section class="py-24 bg-white relative">

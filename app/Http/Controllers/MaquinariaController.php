@@ -47,6 +47,37 @@ class MaquinariaController extends Controller
             $query->where('estado', $request->estado);
         }
 
+        // Filtros avanzados
+        // Filtro de horómetro mínimo
+        if ($request->filled('horometroMin')) {
+            $query->where('horometro_actual', '>=', $request->input('horometroMin'));
+        }
+
+        // Filtro de horómetro máximo
+        if ($request->filled('horometroMax')) {
+            $query->where('horometro_actual', '<=', $request->input('horometroMax'));
+        }
+
+        // Filtro de fecha de compra desde
+        if ($request->filled('fechaCompraDesde')) {
+            $query->where('fecha_compra', '>=', $request->input('fechaCompraDesde'));
+        }
+
+        // Filtro de fecha de compra hasta
+        if ($request->filled('fechaCompraHasta')) {
+            $query->where('fecha_compra', '<=', $request->input('fechaCompraHasta'));
+        }
+
+        // Filtro de fecha de creación desde
+        if ($request->filled('fechaCreacionDesde')) {
+            $query->where('created_at', '>=', $request->input('fechaCreacionDesde') . ' 00:00:00');
+        }
+
+        // Filtro de fecha de creación hasta
+        if ($request->filled('fechaCreacionHasta')) {
+            $query->where('created_at', '<=', $request->input('fechaCreacionHasta') . ' 23:59:59');
+        }
+
         // Ordenamiento (evitar columnas no ordenables como las calculadas)
         $allowed = ['id', 'nombre', 'tipo', 'marca', 'modelo', 'horometro_actual', 'estado', 'created_at'];
         if ($request->has('order') && isset($request->order[0]['column'])) {

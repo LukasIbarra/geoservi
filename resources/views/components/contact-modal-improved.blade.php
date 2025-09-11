@@ -31,7 +31,7 @@
                             </div>
                             <div>
                                 <label for="contact-phone-improved" class="block text-sm font-medium text-gray-300 mb-1">Teléfono</label>
-                                <input type="tel" id="contact-phone-improved" name="phone" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 1234 5678">
+                                <input type="tel" id="contact-phone-improved" name="phone" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400" placeholder="+56 9 3116 5525">
                             </div>
                             <div>
                                 <label for="contact-service-improved" class="block text-sm font-medium text-gray-300 mb-1">Servicio de Interés</label>
@@ -68,7 +68,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                             </div>
-                            <span class="ml-4">Av. Industrial 1234, Rancagua, Región de O'Higgins</span>
+                            <span class="ml-4">Araucania edif 1 5427 105 Espacio la florida La serena</span>
                         </li>
                         <li class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
@@ -76,7 +76,7 @@
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                             </div>
-                            <a href="tel:+56941206045" class="ml-4 hover:text-orange-400 transition-colors">+56 9 4120 6045</a>
+                            <a href="tel:+56931165525" class="ml-4 hover:text-orange-400 transition-colors">+56 9 3116 5525</a>
                         </li>
                         <li class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
@@ -84,7 +84,7 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                             </div>
-                            <a href="mailto:pruebasgeoservi@gmail.com" class="ml-4 hover:text-orange-400 transition-colors">pruebasgeoservi@gmail.com</a>
+                            <a href="mailto:ventas@geoservi.cl" class="ml-4 hover:text-orange-400 transition-colors">ventas@geoservi.cl</a>
                         </li>
                     </ul>
                 </div>

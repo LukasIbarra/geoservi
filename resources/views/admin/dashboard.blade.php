@@ -4,17 +4,22 @@
 
 @section('content')
 <div class="container mx-auto px-4 py-6">
-    <!-- Barra de herramientas -->
-    <div class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold text-white">Dashboard de Mantenimiento</h1>
-        <div class="flex space-x-3">
-            <button onclick="exportarPDF()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors">
+    <!-- Barra de herramientas mejorada -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+            <h1 class="text-3xl font-bold text-white mb-2">Dashboard de Mantenimiento</h1>
+            <p class="text-gray-400 text-sm">Monitoreo en tiempo real del sistema de mantenimiento minero</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <button onclick="exportarPDF()" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-xl flex items-center justify-center transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-red-500/25">
                 <i class="fas fa-file-pdf mr-2"></i>
-                Exportar PDF
+                <span class="hidden sm:inline">Exportar PDF</span>
+                <span class="sm:hidden">PDF</span>
             </button>
-            <button onclick="location.reload()" class="bg-zinc-700 hover:bg-zinc-600 text-white px-4 py-2 rounded-lg flex items-center transition-colors">
+            <button onclick="location.reload()" class="bg-gradient-to-r from-zinc-700 to-zinc-800 hover:from-zinc-800 hover:to-zinc-900 text-white px-6 py-3 rounded-xl flex items-center justify-center transition-all duration-200 transform hover:scale-105 shadow-lg">
                 <i class="fas fa-sync-alt mr-2"></i>
-                Actualizar
+                <span class="hidden sm:inline">Actualizar</span>
+                <span class="sm:hidden">Refresh</span>
             </button>
         </div>
     </div>
@@ -86,49 +91,61 @@
         </div>
     </div>
 
-    <!-- Segunda fila de métricas -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+    <!-- Segunda fila de métricas mejorada -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <!-- Total Maquinarias -->
-        <div class="bg-zinc-800 rounded-lg shadow p-4 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-5 border border-zinc-700 hover:border-orange-500/30 transition-all duration-300 transform hover:scale-105">
             <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-400 text-xs font-medium">Total Maquinarias</p>
-                    <p class="text-2xl font-bold text-white mt-1">{{ $totalMaquinarias }}</p>
+                <div class="flex-1">
+                    <p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Total Maquinarias</p>
+                    <p class="text-3xl font-bold text-white mt-2">{{ $totalMaquinarias }}</p>
+                    <p class="text-gray-500 text-xs mt-1">Equipos registrados</p>
                 </div>
-                <i class="fas fa-truck-monster text-2xl text-orange-400"></i>
+                <div class="bg-orange-500/20 rounded-full p-3 ml-4">
+                    <i class="fas fa-truck-monster text-2xl text-orange-400"></i>
+                </div>
             </div>
         </div>
 
         <!-- Usuarios Sistema -->
-        <div class="bg-zinc-800 rounded-lg shadow p-4 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-5 border border-zinc-700 hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105">
             <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-400 text-xs font-medium">Usuarios</p>
-                    <p class="text-2xl font-bold text-white mt-1">{{ $totalUsuarios }}</p>
+                <div class="flex-1">
+                    <p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Usuarios</p>
+                    <p class="text-3xl font-bold text-white mt-2">{{ $totalUsuarios }}</p>
+                    <p class="text-gray-500 text-xs mt-1">Activos en sistema</p>
                 </div>
-                <i class="fas fa-users text-2xl text-blue-400"></i>
+                <div class="bg-blue-500/20 rounded-full p-3 ml-4">
+                    <i class="fas fa-users text-2xl text-blue-400"></i>
+                </div>
             </div>
         </div>
 
         <!-- Técnicos Activos -->
-        <div class="bg-zinc-800 rounded-lg shadow p-4 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-5 border border-zinc-700 hover:border-green-500/30 transition-all duration-300 transform hover:scale-105">
             <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-400 text-xs font-medium">Técnicos</p>
-                    <p class="text-2xl font-bold text-white mt-1">{{ $tecnicosActivos }}</p>
+                <div class="flex-1">
+                    <p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Técnicos</p>
+                    <p class="text-3xl font-bold text-white mt-2">{{ $tecnicosActivos }}</p>
+                    <p class="text-gray-500 text-xs mt-1">Disponibles</p>
                 </div>
-                <i class="fas fa-hard-hat text-2xl text-green-400"></i>
+                <div class="bg-green-500/20 rounded-full p-3 ml-4">
+                    <i class="fas fa-hard-hat text-2xl text-green-400"></i>
+                </div>
             </div>
         </div>
 
         <!-- Mantenimientos del Mes -->
-        <div class="bg-zinc-800 rounded-lg shadow p-4 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-5 border border-zinc-700 hover:border-purple-500/30 transition-all duration-300 transform hover:scale-105">
             <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-400 text-xs font-medium">Este Mes</p>
-                    <p class="text-2xl font-bold text-white mt-1">{{ $mantenimientosMes }}</p>
+                <div class="flex-1">
+                    <p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Este Mes</p>
+                    <p class="text-3xl font-bold text-white mt-2">{{ $mantenimientosMes }}</p>
+                    <p class="text-gray-500 text-xs mt-1">Mantenimientos realizados</p>
                 </div>
-                <i class="fas fa-calendar-check text-2xl text-purple-400"></i>
+                <div class="bg-purple-500/20 rounded-full p-3 ml-4">
+                    <i class="fas fa-calendar-check text-2xl text-purple-400"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -209,53 +226,53 @@
         </div>
     </div>
 
-    <!-- Gráficos principales -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+    <!-- Gráficos principales mejorados -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <!-- Gráfico de Estado de Flota -->
-        <div class="bg-zinc-800 rounded-xl shadow-lg p-6 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-6 border border-zinc-700 hover:border-blue-500/30 transition-all duration-300">
             <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
                 <i class="fas fa-chart-pie mr-2 text-blue-400"></i>
                 Estado de la Flota
             </h3>
-            <div style="height: 250px; position: relative;">
+            <div style="height: 280px; position: relative;">
                 <canvas id="estadoFlotaChart"></canvas>
             </div>
         </div>
 
         <!-- Gráfico de Tendencia de Mantenimientos -->
-        <div class="bg-zinc-800 rounded-xl shadow-lg p-6 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-6 border border-zinc-700 hover:border-green-500/30 transition-all duration-300">
             <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
                 <i class="fas fa-chart-line mr-2 text-green-400"></i>
                 Tendencia de Mantenimientos (6 meses)
             </h3>
-            <div style="height: 250px; position: relative;">
+            <div style="height: 280px; position: relative;">
                 <canvas id="tendenciaChart"></canvas>
             </div>
         </div>
     </div>
 
-    <!-- Gráfico de barras y actividades -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <!-- Gráfico de barras y actividades mejorados -->
+    <div class="grid grid-cols-1 xl:grid-cols-4 gap-6 mb-8">
         <!-- Mantenimientos por Tipo de Máquina -->
-        <div class="lg:col-span-2 bg-zinc-800 rounded-xl shadow-lg p-6 border border-zinc-700">
+        <div class="xl:col-span-3 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-6 border border-zinc-700 hover:border-purple-500/30 transition-all duration-300">
             <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
                 <i class="fas fa-chart-bar mr-2 text-purple-400"></i>
                 Mantenimientos por Tipo de Máquina (Este mes)
             </h3>
-            <div style="height: 200px; position: relative;">
+            <div style="height: 250px; position: relative;">
                 <canvas id="tipoMaquinaChart"></canvas>
             </div>
         </div>
 
         <!-- Actividades Recientes -->
-        <div class="bg-zinc-800 rounded-xl shadow-lg p-6 border border-zinc-700">
+        <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-6 border border-zinc-700 hover:border-orange-500/30 transition-all duration-300">
             <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
                 <i class="fas fa-history mr-2 text-orange-400"></i>
                 Actividad Reciente
             </h3>
-            <div class="space-y-3 max-h-96 overflow-y-auto custom-scrollbar">
+            <div class="space-y-3 max-h-80 overflow-y-auto custom-scrollbar">
                 @forelse($actividadesRecientes as $actividad)
-                <div class="flex items-start space-x-3 p-3 bg-zinc-900 rounded-lg border border-zinc-700 hover:border-orange-500/50 transition-all duration-200 hover:bg-zinc-800">
+                <div class="flex items-start space-x-3 p-3 bg-zinc-900/50 rounded-lg border border-zinc-700 hover:border-orange-500/50 transition-all duration-200 hover:bg-zinc-800/50 hover:scale-102">
                     <div class="flex-shrink-0 mt-1">
                         <div class="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800">
                             <i class="{{ $actividad['icon'] }} {{ $actividad['color'] }} text-sm"></i>
@@ -289,13 +306,15 @@
         </div>
     </div>
 
-    <!-- Próximos Mantenimientos Programados -->
-    <div class="bg-zinc-800 rounded-xl shadow-lg p-6 border border-zinc-700">
+    <!-- Próximos Mantenimientos Programados - Responsive -->
+    <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl shadow-lg p-6 border border-zinc-700 hover:border-yellow-500/30 transition-all duration-300">
         <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
             <i class="fas fa-calendar-alt mr-2 text-yellow-400"></i>
             Próximos Mantenimientos Programados
         </h3>
-        <div class="overflow-x-auto">
+
+        <!-- Vista de tabla para desktop -->
+        <div class="hidden md:block overflow-x-auto">
             <table class="min-w-full">
                 <thead>
                     <tr class="border-b border-zinc-700">
@@ -365,7 +384,7 @@
                             </span>
                         </td>
                         <td class="px-4 py-3 whitespace-nowrap text-sm">
-                            <a href="{{ route('admin.ordenes.show', $mantenimiento->id) }}" 
+                            <a href="{{ route('admin.ordenes.show', $mantenimiento->id) }}"
                                class="text-orange-400 hover:text-orange-300 transition-colors">
                                 <i class="fas fa-eye"></i>
                             </a>
@@ -380,6 +399,61 @@
                     @endforelse
                 </tbody>
             </table>
+        </div>
+
+        <!-- Vista de tarjetas para móvil -->
+        <div class="md:hidden space-y-4">
+            @forelse($proximosMantenimientos as $mantenimiento)
+            <div class="bg-zinc-900/50 rounded-lg p-4 border border-zinc-700 hover:border-orange-500/30 transition-all duration-200">
+                <div class="flex items-start justify-between mb-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-cog text-orange-400 text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-white">{{ $mantenimiento->maquinaria->nombre ?? 'N/A' }}</p>
+                            <p class="text-xs text-gray-400">{{ $mantenimiento->maquinaria->tipo ?? 'N/A' }}</p>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-400">
+                        Pendiente
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-3">
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Pauta</p>
+                        <p class="text-sm text-gray-300">{{ $mantenimiento->pauta->nombre ?? 'Sin pauta' }}</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Horómetro</p>
+                        <p class="text-sm text-gray-300">{{ number_format($mantenimiento->maquinaria->horometro_actual ?? 0) }} hrs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Horas Restantes</p>
+                        @if($mantenimiento->horas_restantes <= 50)
+                            <p class="text-sm font-bold text-red-400">{{ $mantenimiento->horas_restantes }} hrs</p>
+                        @elseif($mantenimiento->horas_restantes <= 100)
+                            <p class="text-sm font-bold text-yellow-400">{{ $mantenimiento->horas_restantes }} hrs</p>
+                        @else
+                            <p class="text-sm text-green-400">{{ $mantenimiento->horas_restantes }} hrs</p>
+                        @endif
+                    </div>
+                    <a href="{{ route('admin.ordenes.show', $mantenimiento->id) }}"
+                       class="bg-orange-500/20 hover:bg-orange-500/30 text-orange-400 px-3 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-eye"></i>
+                    </a>
+                </div>
+            </div>
+            @empty
+            <div class="text-center py-8 text-gray-500">
+                <i class="fas fa-calendar-times text-3xl mb-3"></i>
+                <p>No hay mantenimientos programados</p>
+            </div>
+            @endforelse
         </div>
     </div>
 </div>

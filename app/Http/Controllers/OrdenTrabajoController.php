@@ -167,6 +167,37 @@ class OrdenTrabajoController extends Controller
             $query->where('pauta_id', $request->input('pautaId'));
         }
 
+        // Filtro por tipo de maquinaria
+        if ($request->filled('tipoMaquinariaFilter')) {
+            $query->whereHas('maquinaria', function ($q) use ($request) {
+                $q->where('tipo', $request->input('tipoMaquinariaFilter'));
+            });
+        }
+
+        // Filtros por rango de horómetro
+        if ($request->filled('horometroMin') || $request->filled('horometroMax')) {
+            $query->where(function ($q) use ($request) {
+                if ($request->filled('horometroMin')) {
+                    $q->where('horometro_en_ejecucion', '>=', $request->input('horometroMin'));
+                }
+                if ($request->filled('horometroMax')) {
+                    $q->where('horometro_en_ejecucion', '<=', $request->input('horometroMax'));
+                }
+            });
+        }
+
+        // Filtros por rango de fechas de creación
+        if ($request->filled('fechaCreacionDesde') || $request->filled('fechaCreacionHasta')) {
+            $query->where(function ($q) use ($request) {
+                if ($request->filled('fechaCreacionDesde')) {
+                    $q->whereDate('created_at', '>=', $request->input('fechaCreacionDesde'));
+                }
+                if ($request->filled('fechaCreacionHasta')) {
+                    $q->whereDate('created_at', '<=', $request->input('fechaCreacionHasta'));
+                }
+            });
+        }
+
         // Orden
         $allowed = ['id', 'fecha_inicio', 'fecha_fin', 'horometro_en_ejecucion', 'estado', 'created_at'];
         if ($request->has('order') && isset($request->order[0]['column'])) {

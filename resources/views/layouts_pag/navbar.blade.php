@@ -36,6 +36,9 @@
                             <a href="{{ url('/cilindros') }}" class="block px-4 py-2 text-gray-300 hover:bg-zinc-700 hover:text-orange-400 transition duration-300">
                                 <i class="fas fa-tools mr-2"></i> Cilindros Hidráulicos
                             </a>
+                            <a href="{{ url('/software') }}" class="block px-4 py-2 text-gray-300 hover:bg-zinc-700 hover:text-orange-400 transition duration-300">
+                                <i class="fas fa-laptop-code mr-2"></i> Software de Gestión
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +77,7 @@
     <!-- Menú móvil (oculto por defecto) -->
     <div id="mobile-menu" class="md:hidden hidden bg-zinc-800 transition-all duration-300 max-h-0 overflow-hidden">
         <div class="container mx-auto px-4 py-2">
-            <a href="#" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+            <a href="{{ url('/') }}" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                 <i class="fas fa-home mr-3"></i> Inicio
             </a>
             <div class="relative">
@@ -83,27 +86,30 @@
                     <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
                 </button>
                 <div id="services-dropdown" class="pl-6 hidden">
-                    <a href="#equipos" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+                    <a href="{{ url('/equipo') }}" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                         <i class="fas fa-cog mr-2"></i> Equipos
                     </a>
-                    <a href="#estructuras" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+                    <a href="{{ url('/estructura') }}" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                         <i class="fas fa-industry mr-2"></i> Estructuras
                     </a>
-                    <a href="#gecomembranas" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+                    <a href="{{ url('/geom') }}" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                         <i class="fas fa-layer-group mr-2"></i> Geomembranas
                     </a>
-                    <a href="#cilindros" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+                    <a href="{{ url('/cilindros') }}" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                         <i class="fas fa-tools mr-2"></i> Cilindros
+                    </a>
+                    <a href="{{ url('/software') }}" class="block py-2 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+                        <i class="fas fa-laptop-code mr-2"></i> Software de Gestión
                     </a>
                 </div>
             </div>
-            <a href="#representaciones" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+            <a href="{{ url('/represent') }}" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                 <i class="fas fa-handshake mr-3"></i> Representaciones
             </a>
-            <a href="#nosotros" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+            <a href="{{ url('/nosotros') }}" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                 <i class="fas fa-building mr-3"></i> Nosotros
             </a>
-            <a href="#contacto" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
+            <a href="{{ url('/contacto') }}" class="block py-3 px-4 text-gray-300 hover:text-orange-400 hover:bg-zinc-700 rounded-lg transition duration-300">
                 <i class="fas fa-envelope mr-3"></i> Contacto
             </a>
             <a href="/login" class="block mt-2 py-2 px-4 bg-orange-500 hover:bg-orange-600 text-gray-900 rounded-lg font-medium text-center transition duration-300">

@@ -108,8 +108,8 @@
                                         </div>
                                     </div>
                                     <div class="ml-4">
-                                        <span class="block text-sm text-gray-400">Gerencia General</span>
-                                        <a href="mailto:juanmiranda@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">juanmiranda@geoservi.cl</a>
+                                        <span class="block text-sm text-gray-400">Gerente General</span>
+                                        <a href="mailto:juanmiranda@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">waltersmith@geoservi.cl</a>
                                     </div>
                                 </li>
                                 <li class="flex items-start group-hover:text-white transition-colors duration-300">
@@ -120,7 +120,40 @@
                                     </div>
                                     <div class="ml-4">
                                         <span class="block text-sm text-gray-400">Operaciones</span>
-                                        <a href="mailto:waltersmith@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">waltersmith@geoservi.cl</a>
+                                        <a href="mailto:waltersmith@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">juanmiranda@geoservi.cl</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start group-hover:text-white transition-colors duration-300">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="flex items-center justify-center h-8 w-8 rounded-full bg-orange-500/20 text-orange-400">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="block text-sm text-gray-400">Marketing</span>
+                                        <a href="mailto:ventas@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">marketing@geoservi.cl</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start group-hover:text-white transition-colors duration-300">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="flex items-center justify-center h-8 w-8 rounded-full bg-orange-500/20 text-orange-400">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="block text-sm text-gray-400">Informática</span>
+                                        <a href="mailto:juanmiranda@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">informatica@geoservi.cl</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start group-hover:text-white transition-colors duration-300">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="flex items-center justify-center h-8 w-8 rounded-full bg-orange-500/20 text-orange-400">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <span class="block text-sm text-gray-400">Contacto</span>
+                                        <a href="mailto:waltersmith@geoservi.cl" class="text-base font-medium hover:text-orange-400 transition-colors duration-300">contacto@geoservi.cl</a>
                                     </div>
                                 </li>
                                 <li class="flex items-start group-hover:text-white transition-colors duration-300">

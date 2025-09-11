@@ -6,8 +6,9 @@
 @include('layouts_pag.flotantes')
 <!-- HERO DEL SERVICIO -->
 <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-    <img src="/img/servicios/maquina.jpg" alt="Equipos Industriales"
-         class="absolute w-full h-full object-cover">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+        <source src="/videos/04.mp4" type="video/mp4">
+    </video>
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
 
     <div class="text-center text-white z-10 px-6 max-w-4xl" data-aos="fade-up">
@@ -33,7 +34,7 @@
         
         <div class="relative" data-aos="fade-right">
             <div class="relative z-10 rounded-2xl overflow-hidden shadow-xl">
-                <img src="/img-pag/conten2.jpg" alt="Trabajo en equipo" class="w-full h-auto">
+                <img src="/img-pag/servi1.jpg" alt="Trabajo en equipo" class="w-full h-auto">
             </div>
             <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-orange-400 rounded-2xl z-0"></div>
         </div>
@@ -88,6 +89,40 @@
             @foreach(['/img/servicios/maquina.jpg','/img/servicios/estructura.jpg','/img/servicios/geomembrana.jpg'] as $img)
             <div class="overflow-hidden rounded-xl shadow-lg group">
                 <img src="{{ $img }}" alt="Proceso" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA DE VIDEOS -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold text-zinc-800 mb-12" data-aos="fade-up">
+            Nuestros Trabajos en Video
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+            @foreach([
+                ['video'=>'05.mp4', 'title'=>'Mantenimiento Industrial', 'desc'=>'Procesos de mantenimiento y reparación de equipos industriales'],
+                ['video'=>'06.mp4', 'title'=>'Fabricación de Piezas', 'desc'=>'Creación de componentes personalizados para maquinaria pesada'],
+                ['video'=>'07.mp4', 'title'=>'Diagnóstico Técnico', 'desc'=>'Análisis avanzado y control de calidad de equipos']
+            ] as $video)
+            <div class="bg-zinc-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="relative">
+                    <video class="w-full h-48 object-cover" autoplay muted loop playsinline>
+                        <source src="/videos/{{ $video['video'] }}" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <button class="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full transition-colors duration-300">
+                            <i class="fas fa-play text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-zinc-800 mb-2">{{ $video['title'] }}</h3>
+                    <p class="text-gray-600 text-sm">{{ $video['desc'] }}</p>
+                </div>
             </div>
             @endforeach
         </div>

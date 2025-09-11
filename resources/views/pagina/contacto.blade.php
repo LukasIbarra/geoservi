@@ -8,7 +8,7 @@
 <!-- Sección Contacto -->
 <section id="contacto" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#141414] to-[#0a0a0a] text-white overflow-hidden">
     <!-- Modal de Contacto -->
-    @include('components.contact-modal')
+    @include('components.contact-modal-improved')
     <!-- Separador superior SVG -->
     <div class="absolute -top-[1px] left-0 w-full overflow-hidden leading-[0] transform rotate-180">
         <svg class="relative block w-full h-16" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">

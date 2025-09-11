@@ -43,6 +43,14 @@ class PautaController extends Controller
             $query->where('tipo_equipo', $request->input('tipoFilter'));
         }
 
+        // Filtro por rango de fechas
+        if ($request->filled('fechaDesde')) {
+            $query->whereDate('created_at', '>=', $request->input('fechaDesde'));
+        }
+        if ($request->filled('fechaHasta')) {
+            $query->whereDate('created_at', '<=', $request->input('fechaHasta'));
+        }
+
         // Orden
         $allowed = ['id','nombre','tipo_equipo','frecuencia_horas','frecuencia_dias','created_at'];
         if ($request->has('order') && isset($request->order[0]['column'])) {
